@@ -11,6 +11,8 @@ import java.util.stream.IntStream;
 public class 순수배열_정적메소드 {
 
 	public static void main(String[] args) {
+		
+		//http://blog.naver.com/PostView.nhn?blogId=javaking75&logNo=220300763889&categoryNo=0&parentCategoryNo=71&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search
 
 		//기본정렬();
 		//기본정렬_문자열();
@@ -25,8 +27,28 @@ public class 순수배열_정적메소드 {
 		//버블정렬_객체2();
 		
 		
-		
+		선택정렬();
 
+	}
+
+	private static void 선택정렬() {
+
+		int[] ns = { 5, 3, 4, 1, 2 };
+		
+		for (int i=0; i<ns.length-1; i++) {
+			for (int j=i+1; j<ns.length; j++) {
+				
+				if (ns[i] > ns[j]) {
+					int temp = ns[i];
+					ns[i] = ns[j];
+					ns[j] = temp;
+				}
+				
+			}
+		}
+		
+		System.out.println(Arrays.toString(ns));
+		
 	}
 
 	private static void 버블정렬_객체2() {
