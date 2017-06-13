@@ -20,23 +20,68 @@ public class 순수배열_정적메소드 {
 		//Array_메소드();
 		//Arrays_메소드();
 		
-		//버블정렬();
+		버블정렬();
 		//버블정렬_문자열();
 		//버블정렬_문자열_영어();
 		//버블정렬_객체();
 		//버블정렬_객체2();
 		
 		
-		선택정렬();
+		//선택정렬();
+		
+		//삽입정렬();
+		
+		
+		
+		
+		
+		
 
 	}
+	
+	
+
+	private static void 삽입정렬() {
+		
+		int[] ns = { 5, 3, 4, 1, 2 };
+		
+		for (int i=1; i<ns.length; i++) {
+			//System.out.println("Step : " + (i + 1));
+			int temp = ns[i];
+			int j = 0;
+				
+			for (j=i-1; j>=0; j--) {
+				//System.out.println("Sub Step : " + (j + 1));
+				
+				if (ns[j] > temp) {
+					ns[j+1] = ns[j];
+				} else {
+					break;
+				}
+			}
+			ns[j+1] = temp;
+			//System.out.println(Arrays.toString(ns));
+		}
+		
+		System.out.println(Arrays.toString(ns));
+		
+	}
+
+
 
 	private static void 선택정렬() {
+		
+		//전체 요소 중 가장 작은 요소를 찾아 선택하여 첫번째 요소와 교환한다.
+		//그 다음 두번째 작은 요소를 찾아 두번째 요소와 교환한다.
+		//위의 과정을 반복한다.
 
 		int[] ns = { 5, 3, 4, 1, 2 };
 		
 		for (int i=0; i<ns.length-1; i++) {
+			//System.out.println("Step : " + (i + 1));
+				
 			for (int j=i+1; j<ns.length; j++) {
+				//System.out.println("Sub Step : " + (j + 1));
 				
 				if (ns[i] > ns[j]) {
 					int temp = ns[i];
@@ -176,6 +221,7 @@ public class 순수배열_정적메소드 {
 					ns[j+1] = temp;
 					
 				}
+
 			}
 		}
 		
